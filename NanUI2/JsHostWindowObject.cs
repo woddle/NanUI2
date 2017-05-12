@@ -1,0 +1,52 @@
+﻿using NanUI2.Internal;
+using System;
+using System.Windows.Forms;
+
+namespace NanUI2.ChromiumCore
+{
+	internal class JsHostWindowObject : JSObject
+	{
+		private IntPtr handle;
+
+        internal JsHostWindowObject(Control parent)
+		{
+            if (!(parent is Form))
+            {
+                return;
+            }
+            Form parentForm = (Form)parent;
+			handle = parent.Handle;
+
+			var winObj = AddObject("hostWindow");
+
+			winObj.AddFunction("close").Execute += (sender, e) => parentForm.UpdateUI(() => parentForm.Close());
+			winObj.AddFunction("minimize").Execute += (sender, e) => parent.UpdateUI(() => {
+				parentForm.UpdateUI(() =>
+				{
+					if (parentForm.WindowState == FormWindowState.Minimized)
+					{
+						NativeMethods.SendMessage(handle, NativeMethods.WindowsMessage.WM_SYSCOMMAND, (IntPtr)NativeMethods.SysCommand.SC_RESTORE, IntPtr.Zero);
+					}
+					else
+					{
+						NativeMethods.SendMessage(handle, NativeMethods.WindowsMessage.WM_SYSCOMMAND, (IntPtr)NativeMethods.SysCommand.SC_MINIMIZE, IntPtr.Zero);
+					}
+				});
+			});
+			winObj.AddFunction("maximize").Execute += (sender, e) => parent.UpdateUI(() => {
+				parentForm.UpdateUI(() =>
+				{
+					if (parentForm.WindowState == FormWindowState.Maximized)
+					{
+						NativeMethods.SendMessage(handle, NativeMethods.WindowsMessage.WM_SYSCOMMAND, (IntPtr)NativeMethods.SysCommand.SC_RESTORE, IntPtr.Zero);
+					}
+					else
+					{
+						NativeMethods.SendMessage(handle, NativeMethods.WindowsMessage.WM_SYSCOMMAND, (IntPtr)NativeMethods.SysCommand.SC_MAXIMIZE, IntPtr.Zero);
+					}
+				});
+			});
+		}
+
+	}
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/mui.min.css" />
+    <link rel="stylesheet" href="css/element-ui.min.js.css" />
+    
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+    
+    <script type="text/javascript" src="js/vue.min.js" ></script>
+    <script type="text/javascript" src="js/vue-router.min.js" ></script>
+    <script type="text/javascript" src="js/element-ui.min.js" ></script>
+    <script type="text/javascript" src="js/velocity.min.js" ></script>
+    <script type="text/javascript" src="js/Tween.min.js" ></script>
+    <script type="text/javascript" src="js/mui.min.js" ></script>
+    <script type="text/javascript" src="js/layer/layer.js" ></script>
+    <script type="text/javascript" src="js/echarts.min.js" ></script>
+    <script type="text/javascript" src="js/demo.js" ></script>
+    <link rel="stylesheet" href="css/demo.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <script type="text/javascript">
+    	
+   		
+    </script>
+</head>
+<body>
+	<div id="btns">
+		<button type="button" class="mui-btn mui-btn-blue" id="btn">获取位置</button>
+		<button type="button" class="mui-btn mui-btn-blue" id="lis">监听</button>
+		<button type="button" class="mui-btn mui-btn-success" id="clc">停止监听</button>
+	</div>
+	<div id ="txt">信息</div>
+	
+	
+	<div id="app">
+  <p v-if ="seen" >input 元素：</p>
+  <input type = "text" v-model="message" placeholder="编辑我……">
+  <p>消息是: {{ message }}</p>
+	
+  <p>textarea 元素：</p>
+  <p style="white-space: pre">{{ message2 }}</p>
+  <textarea v-model="message2" placeholder="多行文本输入……"></textarea>
+  
+  <button v-on:click="seen = false ">看不见</button>
+	<button v-on:click="seen = true ">出来</button>
+	
+	<el-button type="primary" onclick='test()'>主要按钮</el-button>
+	<button type="button" onclick='test()'>测试</button>>
+</div>
+
+<div id="animated-number-demo">
+  <input v-model.number="number" type="number" step="20">
+  <p>{{ animatedNumber }}</p>
+</div>
+
+<div id="tips">
+	<el-badge :value="102" class="item">
+  <el-button size="small">评论</el-button>
+</el-badge>
+<el-badge :value="30" class="item">
+  <el-button size="small">回复</el-button>
+</el-badge>
+</div>
+
+<style>
+.item {
+  margin-top: 10px;
+  margin-right: 40px;
+}
+</style>
+
+<div id="main" style="width: 600px;height:400px;"></div>
+
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    option = {
+        title: {
+            text: '动态数据',
+            subtext: '纯属虚构'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#283b56'
+                }
+            }
+        },
+        legend: {
+            data: ['最新成交价', '预购队列']
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                dataView: { readOnly: false },
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        dataZoom: {
+            show: false,
+            start: 0,
+            end: 100
+        },
+        xAxis: [
+        {
+            type: 'category',
+            boundaryGap: true,
+            data: (function () {
+                var now = new Date();
+                var res = [];
+                var len = 10;
+                while (len--) {
+                    res.unshift(now.toLocaleTimeString().replace(/^\D*/, ''));
+                    now = new Date(now - 2000);
+                }
+                return res;
+            })()
+        },
+        {
+            type: 'category',
+            boundaryGap: true,
+            data: (function () {
+                var res = [];
+                var len = 10;
+                while (len--) {
+                    res.push(len + 1);
+                }
+                return res;
+            })()
+        }
+    ],
+        yAxis: [
+        {
+            type: 'value',
+            scale: true,
+            name: '价格',
+            max: 30,
+            min: 0,
+            boundaryGap: [0.2, 0.2]
+        },
+        {
+            type: 'value',
+            scale: true,
+            name: '预购量',
+            max: 1200,
+            min: 0,
+            boundaryGap: [0.2, 0.2]
+        }
+    ],
+        series: [
+        {
+            name: '预购队列',
+            type: 'bar',
+            xAxisIndex: 1,
+            yAxisIndex: 1,
+            data: (function () {
+                var res = [];
+                var len = 10;
+                while (len--) {
+                    res.push(Math.round(Math.random() * 1000));
+                }
+                return res;
+            })()
+        },
+        {
+            name: '最新成交价',
+            type: 'line',
+            data: (function () {
+                var res = [];
+                var len = 0;
+                while (len < 10) {
+                    res.push((Math.random() * 10 + 5).toFixed(1) - 0);
+                    len++;
+                }
+                return res;
+            })()
+        }
+    ]
+    };
+
+    app.count = 11;
+    setInterval(function () {
+        axisData = (new Date()).toLocaleTimeString().replace(/^\D*/, '');
+
+        var data0 = option.series[0].data;
+        var data1 = option.series[1].data;
+        data0.shift();
+        data0.push(Math.round(Math.random() * 1000));
+        data1.shift();
+        data1.push((Math.random() * 10 + 5).toFixed(1) - 0);
+
+        option.xAxis[0].data.shift();
+        option.xAxis[0].data.push(axisData);
+        option.xAxis[1].data.shift();
+        option.xAxis[1].data.push(app.count++);
+
+        myChart.setOption(option);
+    }, 2100);
+    </script>
+
+
+<script>
+    function test() {
+        layer.msg('Hello World');
+        mui.toast("Hello World");
+
+    }
+    new Vue({
+        el: '#tips',
+        data: {
+            message: '',
+            message2: '菜鸟教程\r\nhttp://www.runoob.com',
+            seen: true
+        }
+    })
+
+    new Vue({
+        el: '#app',
+        data: {
+            message: '',
+            message2: '菜鸟教程\r\nhttp://www.runoob.com',
+            seen: true
+        }
+    })
+
+    // 动画
+    new Vue({
+        el: '#animated-number-demo',
+        data: {
+            number: 0,
+            animatedNumber: 0
+        },
+        watch: {
+            number: function (newValue, oldValue) {
+                var vm = this
+                function animate(time) {
+                    requestAnimationFrame(animate)
+                    TWEEN.update(time)
+                }
+                new TWEEN.Tween({ tweeningNumber: oldValue })
+        .easing(TWEEN.Easing.Quadratic.Out)
+        .to({ tweeningNumber: newValue }, 500)
+        .onUpdate(function () {
+            vm.animatedNumber = this.tweeningNumber.toFixed(0)
+        })
+        .start()
+                animate()
+            }
+        }
+    })
+
+</script>
+	
+	
+
+</body>
+</html>
