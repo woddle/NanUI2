@@ -1,0 +1,1 @@
+添加了HtmlControl.原来只支持对话框。以后可以把HtmlControl贴在自己的程序里面
