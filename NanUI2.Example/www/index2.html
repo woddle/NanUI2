@@ -20,8 +20,14 @@
   <!-- 路由匹配到的组件将渲染在这里 -->
   <router-view></router-view>
 </div>
+<input onclick="abc()" type="button">ssdf</input>
 
 <script>
+
+function abc(){
+    window.location.href='http://www.baidu.com';
+}
+
 // 0. 如果使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)
 
 // 1. 定义（路由）组件。

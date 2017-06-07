@@ -80,13 +80,17 @@ namespace NanUI2
 
 
 
-			if (PlatformArch == RuntimeArch.x64)
-				FrameworkDir = System.IO.Path.Combine(localRuntimeDir, @"fx\", @"x64");
-			else
-				FrameworkDir = System.IO.Path.Combine(localRuntimeDir, @"fx\", @"x86");
+// 			if (PlatformArch == RuntimeArch.x64)
+// 				FrameworkDir = System.IO.Path.Combine(localRuntimeDir, @"fx\", @"x64");
+// 			else
+// 				FrameworkDir = System.IO.Path.Combine(localRuntimeDir, @"fx\", @"x86");
+// 
+// 			LocalesDir = System.IO.Path.Combine(localRuntimeDir, @"fx\", @"Resources\locales");
+// 			ResourcesDir = System.IO.Path.Combine(localRuntimeDir, @"fx\", @"Resources");
 
-			LocalesDir = System.IO.Path.Combine(localRuntimeDir, @"fx\", @"Resources\locales");
-			ResourcesDir = System.IO.Path.Combine(localRuntimeDir, @"fx\", @"Resources");
+            FrameworkDir = localRuntimeDir;
+            LocalesDir = System.IO.Path.Combine(localRuntimeDir, @"Resources\locales");
+            ResourcesDir = System.IO.Path.Combine(localRuntimeDir, @"Resources");
 
 			var cfxDllFile = System.IO.Path.Combine(FrameworkDir, libCfxName);
 
@@ -100,8 +104,8 @@ namespace NanUI2
                 {"icudtl.dat", System.IO.File.Exists(System.IO.Path.Combine(FrameworkDir, "icudtl.dat"))},
                 {"libcfx", System.IO.File.Exists(cfxDllFile)},
                 {"libcef.dll", System.IO.File.Exists(System.IO.Path.Combine(FrameworkDir, "libcef.dll"))},
-                {"natives_blob.bin", System.IO.File.Exists(System.IO.Path.Combine(FrameworkDir, "natives_blob.bin"))},
-                {"snapshot_blob.bin", System.IO.File.Exists(System.IO.Path.Combine(FrameworkDir, "snapshot_blob.bin"))}
+                //{"natives_blob.bin", System.IO.File.Exists(System.IO.Path.Combine(FrameworkDir, "natives_blob.bin"))},
+                //{"snapshot_blob.bin", System.IO.File.Exists(System.IO.Path.Combine(FrameworkDir, "snapshot_blob.bin"))}
 			};
 
 			if (EnableFlashSupport)
@@ -118,7 +122,6 @@ namespace NanUI2
 
 		private static bool IsRuntimeExists()
 		{
-
 			var libCfxName = "libcfx.dll";
 
 			if (PlatformArch == RuntimeArch.x64)
