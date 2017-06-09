@@ -213,7 +213,6 @@
     <EmbeddedResource Include="www\static\js\bs\js\npm.js" />
     <EmbeddedResource Include="www\static\js\echarts.min.js" />
     <EmbeddedResource Include="www\static\js\element-ui.min.js" />
-    <EmbeddedResource Include="www\static\js\jquery-2.1.1.min.js" />
     <EmbeddedResource Include="www\static\js\layer.js" />
     <EmbeddedResource Include="www\static\js\layer\layer.js" />
     <EmbeddedResource Include="www\static\js\layer\mobile\layer.js" />
@@ -233,6 +232,9 @@
   <ItemGroup>
     <Folder Include="www\css\" />
     <Folder Include="www\js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\static\js\jquery-3.2.1.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
