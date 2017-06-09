@@ -107,61 +107,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <EmbeddedResource Include="SubForm.resx">
-      <DependentUpon>SubForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="www1\fonts\fontawesome-webfont.eot" />
-    <EmbeddedResource Include="www1\fonts\fontawesome-webfont.ttf" />
-    <EmbeddedResource Include="www1\fonts\fontawesome-webfont.woff" />
-    <EmbeddedResource Include="www1\fonts\fontawesome-webfont.woff2" />
-    <EmbeddedResource Include="www1\fonts\FontAwesome.otf" />
-    <EmbeddedResource Include="www1\fonts\glyphicons-halflings-regular.eot" />
-    <EmbeddedResource Include="www1\fonts\glyphicons-halflings-regular.ttf" />
-    <EmbeddedResource Include="www1\fonts\glyphicons-halflings-regular.woff" />
-    <EmbeddedResource Include="www1\fonts\glyphicons-halflings-regular.woff2" />
-    <EmbeddedResource Include="www1\Scripts\jquery-2.2.3.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="www\.project" />
-    <EmbeddedResource Include="www\css\common.css" />
-    <EmbeddedResource Include="www\css\demo.css" />
-    <EmbeddedResource Include="www\css\element-ui.min.js.css" />
-    <EmbeddedResource Include="www\css\layer.css" />
-    <EmbeddedResource Include="www\css\mui.min.css" />
-    <EmbeddedResource Include="www\index.html" />
-    <EmbeddedResource Include="www\index2.html" />
-    <EmbeddedResource Include="www\manifest.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="www\js\demo.js" />
-    <EmbeddedResource Include="www\js\element-ui.min.js" />
-    <EmbeddedResource Include="www\js\jquery-2.1.1.min.js" />
-    <EmbeddedResource Include="www\js\layer.js" />
-    <EmbeddedResource Include="www\js\layer\layer.js" />
-    <EmbeddedResource Include="www\js\layer\mobile\layer.js" />
-    <EmbeddedResource Include="www\js\layer\mobile\need\layer.css" />
-    <EmbeddedResource Include="www\js\layer\skin\default\icon-ext.png" />
-    <EmbeddedResource Include="www\js\layer\skin\default\icon.png" />
-    <EmbeddedResource Include="www\js\layer\skin\default\layer.css" />
-    <EmbeddedResource Include="www\js\layer\skin\default\loading-0.gif" />
-    <EmbeddedResource Include="www\js\layer\skin\default\loading-1.gif" />
-    <EmbeddedResource Include="www\js\layer\skin\default\loading-2.gif" />
-    <EmbeddedResource Include="www\js\Tween.min.js" />
-    <EmbeddedResource Include="www\js\velocity.min.js" />
-    <EmbeddedResource Include="www\js\vue-router.min.js" />
-    <EmbeddedResource Include="www\js\vue.min.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="www\js\mui.min.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="www\js\echarts.min.js" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="www1\about.html" />
     <EmbeddedResource Include="www1\Content\about.css" />
     <EmbeddedResource Include="www1\Content\base.css" />
@@ -171,8 +116,17 @@
     <EmbeddedResource Include="www1\Content\bootstrap.min.css" />
     <EmbeddedResource Include="www1\Content\font-awesome.css" />
     <EmbeddedResource Include="www1\Content\font-awesome.min.css" />
+    <EmbeddedResource Include="www1\fonts\fontawesome-webfont.eot" />
     <EmbeddedResource Include="www1\fonts\fontawesome-webfont.svg" />
+    <EmbeddedResource Include="www1\fonts\fontawesome-webfont.ttf" />
+    <EmbeddedResource Include="www1\fonts\fontawesome-webfont.woff" />
+    <EmbeddedResource Include="www1\fonts\fontawesome-webfont.woff2" />
+    <EmbeddedResource Include="www1\fonts\FontAwesome.otf" />
+    <EmbeddedResource Include="www1\fonts\glyphicons-halflings-regular.eot" />
     <EmbeddedResource Include="www1\fonts\glyphicons-halflings-regular.svg" />
+    <EmbeddedResource Include="www1\fonts\glyphicons-halflings-regular.ttf" />
+    <EmbeddedResource Include="www1\fonts\glyphicons-halflings-regular.woff" />
+    <EmbeddedResource Include="www1\fonts\glyphicons-halflings-regular.woff2" />
     <EmbeddedResource Include="www1\images\balloon.png" />
     <EmbeddedResource Include="www1\images\beans.png" />
     <EmbeddedResource Include="www1\images\cloudLarge.png" />
@@ -197,8 +151,26 @@
     <EmbeddedResource Include="www1\Scripts\jquery-2.2.3.intellisense.js" />
     <EmbeddedResource Include="www1\Scripts\jquery-2.2.3.js" />
     <EmbeddedResource Include="www1\Scripts\jquery-2.2.3.min.js" />
+    <EmbeddedResource Include="www1\Scripts\jquery-2.2.3.min.map" />
     <EmbeddedResource Include="www1\Scripts\stats.min.js" />
     <EmbeddedResource Include="www1\Scripts\xg.min.js" />
+    <EmbeddedResource Include="www\.project" />
+    <EmbeddedResource Include="www\index.html" />
+    <EmbeddedResource Include="www\index2.html" />
+    <EmbeddedResource Include="www\manifest.json" />
+    <None Include="App.config" />
+    <EmbeddedResource Include="SubForm.resx">
+      <DependentUpon>SubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="www\static\js\bs\fonts\glyphicons-halflings-regular.eot" />
+    <EmbeddedResource Include="www\static\js\bs\fonts\glyphicons-halflings-regular.ttf" />
+    <EmbeddedResource Include="www\static\js\bs\fonts\glyphicons-halflings-regular.woff" />
+    <EmbeddedResource Include="www\static\js\bs\fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NanUI2\NanUI2.csproj">
@@ -227,6 +199,40 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\static\css\common.css" />
+    <EmbeddedResource Include="www\static\css\element-ui.min.js.css" />
+    <EmbeddedResource Include="www\static\css\layer.css" />
+    <EmbeddedResource Include="www\static\css\mui.min.css" />
+    <EmbeddedResource Include="www\static\js\bs\css\bootstrap-theme.min.css" />
+    <EmbeddedResource Include="www\static\js\bs\css\bootstrap.min.css" />
+    <EmbeddedResource Include="www\static\js\bs\fonts\glyphicons-halflings-regular.svg" />
+    <EmbeddedResource Include="www\static\js\bs\js\bootstrap.js" />
+    <EmbeddedResource Include="www\static\js\bs\js\bootstrap.min.js" />
+    <EmbeddedResource Include="www\static\js\bs\js\npm.js" />
+    <EmbeddedResource Include="www\static\js\echarts.min.js" />
+    <EmbeddedResource Include="www\static\js\element-ui.min.js" />
+    <EmbeddedResource Include="www\static\js\jquery-2.1.1.min.js" />
+    <EmbeddedResource Include="www\static\js\layer.js" />
+    <EmbeddedResource Include="www\static\js\layer\layer.js" />
+    <EmbeddedResource Include="www\static\js\layer\mobile\layer.js" />
+    <EmbeddedResource Include="www\static\js\layer\mobile\need\layer.css" />
+    <EmbeddedResource Include="www\static\js\layer\skin\default\icon-ext.png" />
+    <EmbeddedResource Include="www\static\js\layer\skin\default\icon.png" />
+    <EmbeddedResource Include="www\static\js\layer\skin\default\layer.css" />
+    <EmbeddedResource Include="www\static\js\layer\skin\default\loading-0.gif" />
+    <EmbeddedResource Include="www\static\js\layer\skin\default\loading-1.gif" />
+    <EmbeddedResource Include="www\static\js\layer\skin\default\loading-2.gif" />
+    <EmbeddedResource Include="www\static\js\mui.min.js" />
+    <EmbeddedResource Include="www\static\js\Tween.min.js" />
+    <EmbeddedResource Include="www\static\js\velocity.min.js" />
+    <EmbeddedResource Include="www\static\js\vue-router.min.js" />
+    <EmbeddedResource Include="www\static\js\vue.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="www\css\" />
+    <Folder Include="www\js\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
