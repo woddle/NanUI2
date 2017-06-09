@@ -1,0 +1,17 @@
+E:\个人项目\NanUI2\NanUI2.Example\bin\x86\Debug\NanUI2.Example.exe.config
+E:\个人项目\NanUI2\NanUI2.Example\bin\x86\Debug\NanUI2.Example.exe
+E:\个人项目\NanUI2\NanUI2.Example\bin\x86\Debug\NanUI2.Example.pdb
+E:\个人项目\NanUI2\NanUI2.Example\bin\x86\Debug\NanUI2.dll
+E:\个人项目\NanUI2\NanUI2.Example\bin\x86\Debug\System.Net.Http.dll
+E:\个人项目\NanUI2\NanUI2.Example\bin\x86\Debug\NanUI2.pdb
+E:\个人项目\NanUI2\NanUI2.Example\bin\x86\Debug\System.Net.Http.xml
+E:\个人项目\NanUI2\NanUI2.Example\bin\x86\Debug\zh-Hans\System.Net.Http.resources.dll
+E:\个人项目\NanUI2\NanUI2.Example\obj\x86\Debug\NanUI2.Example.csprojResolveAssemblyReference.cache
+E:\个人项目\NanUI2\NanUI2.Example\obj\x86\Debug\NanUIFirst.SubForm.resources
+E:\个人项目\NanUI2\NanUI2.Example\obj\x86\Debug\NanUIFirst.MainForm.resources
+E:\个人项目\NanUI2\NanUI2.Example\obj\x86\Debug\NanUI2.Example.csproj.GenerateResource.Cache
+E:\个人项目\NanUI2\NanUI2.Example\obj\x86\Debug\NanUI2.Example.exe
+E:\个人项目\NanUI2\NanUI2.Example\obj\x86\Debug\NanUI2.Example.pdb
+E:\个人项目\NanUI2\bin\Debug\NanUI2.Example.exe.config
+E:\个人项目\NanUI2\bin\Debug\NanUI2.Example.exe
+E:\个人项目\NanUI2\bin\Debug\NanUI2.Example.pdb

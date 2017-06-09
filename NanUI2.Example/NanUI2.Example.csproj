@@ -166,6 +166,10 @@
     <EmbeddedResource Include="www\static\js\bs\fonts\glyphicons-halflings-regular.ttf" />
     <EmbeddedResource Include="www\static\js\bs\fonts\glyphicons-halflings-regular.woff" />
     <EmbeddedResource Include="www\static\js\bs\fonts\glyphicons-halflings-regular.woff2" />
+    <EmbeddedResource Include="www\static\js\metrouicss\fonts\metro.eot" />
+    <EmbeddedResource Include="www\static\js\metrouicss\fonts\metro.ttf" />
+    <EmbeddedResource Include="www\static\js\metrouicss\fonts\metro.woff" />
+    <EmbeddedResource Include="www\static\js\metrouicss\fonts\selection.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">
@@ -213,7 +217,6 @@
     <EmbeddedResource Include="www\static\js\bs\js\npm.js" />
     <EmbeddedResource Include="www\static\js\echarts.min.js" />
     <EmbeddedResource Include="www\static\js\element-ui.min.js" />
-    <EmbeddedResource Include="www\static\js\layer.js" />
     <EmbeddedResource Include="www\static\js\layer\layer.js" />
     <EmbeddedResource Include="www\static\js\layer\mobile\layer.js" />
     <EmbeddedResource Include="www\static\js\layer\mobile\need\layer.css" />
@@ -235,6 +238,23 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="www\static\js\jquery-3.2.1.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="www\static\js\metrouicss\css\metro-colors.css" />
+    <EmbeddedResource Include="www\static\js\metrouicss\css\metro-colors.min.css" />
+    <EmbeddedResource Include="www\static\js\metrouicss\css\metro-icons.css" />
+    <EmbeddedResource Include="www\static\js\metrouicss\css\metro-icons.min.css" />
+    <EmbeddedResource Include="www\static\js\metrouicss\css\metro-responsive.css" />
+    <EmbeddedResource Include="www\static\js\metrouicss\css\metro-responsive.min.css" />
+    <EmbeddedResource Include="www\static\js\metrouicss\css\metro-rtl.css" />
+    <EmbeddedResource Include="www\static\js\metrouicss\css\metro-rtl.min.css" />
+    <EmbeddedResource Include="www\static\js\metrouicss\css\metro-schemes.css" />
+    <EmbeddedResource Include="www\static\js\metrouicss\css\metro-schemes.min.css" />
+    <EmbeddedResource Include="www\static\js\metrouicss\css\metro.css" />
+    <EmbeddedResource Include="www\static\js\metrouicss\css\metro.min.css" />
+    <EmbeddedResource Include="www\static\js\metrouicss\fonts\metro.svg" />
+    <EmbeddedResource Include="www\static\js\metrouicss\js\metro.js" />
+    <EmbeddedResource Include="www\static\js\metrouicss\js\metro.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
