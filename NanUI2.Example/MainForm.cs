@@ -13,7 +13,7 @@ namespace NanUIFirst
 {
     public partial class MainForm : HtmlUIForm
     {
-        public MainForm() : base("embedded://www/index.html")
+        public MainForm() : base("embedded://www/index3.html")
         {
             InitializeComponent();
             //在js中注册一个方法来打开About窗口

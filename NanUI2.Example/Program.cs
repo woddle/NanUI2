@@ -14,11 +14,15 @@ namespace NanUIFirst
             Application.SetCompatibleTextRenderingDefault(false);
 
             HtmlUILauncher.EnableFlashSupport = false;          // 需要引用PepperFlash文件夹
-            
 
-            if (HtmlUILauncher.InitializeChromium((args => {
+
+            if (HtmlUILauncher.InitializeChromium((args =>
+            {
                 args.Settings.LogSeverity = Chromium.CfxLogSeverity.Disable;
-            })))
+            }), cmd =>
+            {
+                cmd.CommandLine.AppendSwitch("disable-web-security");               // 取消掉安全设置，可以跨域请求数据
+            }))
             {
                 //初始化成功，加载程序集内嵌的资源到运行时中
                 HtmlUILauncher.RegisterEmbeddedScheme(System.Reflection.Assembly.GetExecutingAssembly());
