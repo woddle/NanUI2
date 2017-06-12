@@ -1,0 +1,101 @@
+﻿
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>幽灵按钮</title>
+		<style>
+			*{margin: 0;padding: 0;font-family: "微软雅黑" arial;}
+			body{
+				background-color: #333;
+			}
+			.button{
+				margin: 180px auto;
+				color: rgb(45,203,112);
+				display: block;
+				width: 180px;
+				height: 50px;
+				border:solid 2px white;
+				text-align: center;
+				line-height: 50px;
+				position: relative;
+			}
+			
+			.line{
+				background-color: white;
+				position: absolute;
+				transition: all 0.2s ease;
+			}
+			
+			.line-top{
+				display:block;
+				top: -2px;
+				height: 2px;
+				width: 0px;
+				left: -110%;
+				
+			}
+			
+			.button:hover .line-top{
+				top: -2px;
+				left: -2px;
+				height: 2px;
+				width: 100%;
+			}
+			
+			.line-bottom{
+				display:block;
+				top: 50px;
+				height: 2px;
+				width: 0px;
+				right: -110%;
+			}
+			
+			.button:hover .line-bottom{
+				top: 50px;
+				right: 2px;
+				height: 2px;
+				width: 100%;
+			}
+			
+			.line-left{
+				display:block;
+				height: 0px;
+				width: 2px;
+				bottom: -110%;
+			}
+			
+			.button:hover .line-left{
+				left: -2px;
+				height: 100%;
+				width: 2px;
+				bottom: 2px;
+			}
+			
+			.line-right{
+				display:block;
+				height: 0px;
+				width: 2px;
+				top: -110%;
+				right: -2px;
+			}
+			
+			.button:hover .line-right{
+				right: -2px;
+				height: 100%;
+				width: 2px;
+				top: 2px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<a class="button">
+			<span class="line line-top"></span>
+			<span class="line line-right"></span>
+			<span class="line line-bottom"></span>
+			<span class="line line-left"></span>
+			MISSION
+		</a>
+	</body>
+</html>
