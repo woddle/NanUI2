@@ -7,7 +7,7 @@ var $client;
 	function initSysCommands() {
 
 		$(window).on('windowstatechanged', function (e) {
-			var el = $('.-nanui-maximize');
+			var el = $('.-nanui2-maximize');
 			if (e.detail.state == 2) {
 				el.text('\u0032');
 			}

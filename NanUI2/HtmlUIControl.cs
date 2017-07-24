@@ -39,7 +39,7 @@ namespace NanUI2
 		private NativeMethods.MARGINS dwmMargins;
 
 		/// <summary>
-		/// NanUI窗口状态变化时，发送JS事件通知网页端
+		/// NanUI2窗口状态变化时，发送JS事件通知网页端
 		/// </summary>
 		private const string JS_WINDOW_STATE_CHANGED = "(function(){{var event = new CustomEvent('windowstatechanged',{{'detail':{{ state: {0}, width:{1}, height:{2}}}}}); window.dispatchEvent(event);}})();";
 
@@ -71,26 +71,26 @@ namespace NanUI2
 
 		protected readonly bool IsDesignMode = LicenseManager.UsageMode == LicenseUsageMode.Designtime;
 		/// <summary>
-		/// 设置或获取NanUI在Nonclient模式下是否显示投影
+		/// 设置或获取NanUI2在Nonclient模式下是否显示投影
 		/// </summary>
-		[Category("NanUI")]
+		[Category("NanUI2")]
 		public bool NonclientModeDropShadow
 		{
 			get; set;
 		}
 
 		/// <summary>
-		/// 设置或获取NanUI是否为无边窗口
+		/// 设置或获取NanUI2是否为无边窗口
 		/// </summary>
-		[Category("NanUI")]
+		[Category("NanUI2")]
 		public bool Borderless
 		{
 			get; set;
 		} 
 		/// <summary>
-		/// 设置或获取NanUI窗口加载等待画面使用的图片
+		/// 设置或获取NanUI2窗口加载等待画面使用的图片
 		/// </summary>
-		[Category("NanUI")]
+		[Category("NanUI2")]
 		public Image SplashImage
 		{
 			get
@@ -103,9 +103,9 @@ namespace NanUI2
 			}
 		}
 		/// <summary>
-		/// 设置或获取NanUI窗口加载等待画面图片布局方式
+		/// 设置或获取NanUI2窗口加载等待画面图片布局方式
 		/// </summary>
-		[Category("NanUI")]
+		[Category("NanUI2")]
 		public ImageLayout SplashImageLayout
 		{
 			get
@@ -120,9 +120,9 @@ namespace NanUI2
 
 
 		/// <summary>
-		/// 设置或获取NanUI窗口加载等待画面背景颜色
+		/// 设置或获取NanUI2窗口加载等待画面背景颜色
 		/// </summary>
-		[Category("NanUI")]
+		[Category("NanUI2")]
 		public Color SplashBackColor
 		{
 			get
@@ -143,9 +143,9 @@ namespace NanUI2
 
 
 		/// <summary>
-		/// 设置或获取NanUI窗口是否可以拖动大小
+		/// 设置或获取NanUI2窗口是否可以拖动大小
 		/// </summary>
-		[Category("NanUI")]
+		[Category("NanUI2")]
 		public bool Resizable
 		{
 			get;
@@ -153,9 +153,9 @@ namespace NanUI2
 		} 
 
 		/// <summary>
-		/// 设置或获取NanUI窗口边框线条粗细
+		/// 设置或获取NanUI2窗口边框线条粗细
 		/// </summary>
-		[Category("NanUI")]
+		[Category("NanUI2")]
 		public int BorderSize
 		{
 			get; set;
@@ -164,9 +164,9 @@ namespace NanUI2
 
 
 		/// <summary>
-		/// 设置或获取NanUI窗口边框颜色
+		/// 设置或获取NanUI2窗口边框颜色
 		/// </summary>
-		[Category("NanUI")]
+		[Category("NanUI2")]
 		public Color BorderColor
 		{
 			get;
@@ -322,7 +322,7 @@ namespace NanUI2
 			};
 
 
-			GlobalObject.Add("NanUI", new JsHostWindowObject(this));
+			GlobalObject.Add("NanUI2", new JsHostWindowObject(this));
 
 
 		}

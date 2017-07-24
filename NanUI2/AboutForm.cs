@@ -12,13 +12,13 @@ namespace NanUI2
 
 		private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			Process.Start("http://www.cnblogs.com/linxuanchen/");
+            Process.Start("https://github.com/woddle/NanUI2");
 
 		}
 
 		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			Process.Start("https://github.com/NetDimension/NanUI");
+            Process.Start("https://github.com/woddle/NanUI2");
 		}
 	}
 }

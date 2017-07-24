@@ -15,3 +15,12 @@ E:\个人项目\NanUI2\NanUI2.Example\obj\x86\Debug\NanUI2.Example.pdb
 E:\个人项目\NanUI2\bin\Debug\NanUI2.Example.exe.config
 E:\个人项目\NanUI2\bin\Debug\NanUI2.Example.exe
 E:\个人项目\NanUI2\bin\Debug\NanUI2.Example.pdb
+C:\Users\wugang\Desktop\现在的工程\NanUI2\bin\Debug\NanUI2.Example.exe.config
+C:\Users\wugang\Desktop\现在的工程\NanUI2\bin\Debug\NanUI2.Example.exe
+C:\Users\wugang\Desktop\现在的工程\NanUI2\bin\Debug\NanUI2.Example.pdb
+C:\Users\wugang\Desktop\现在的工程\NanUI2\NanUI2.Example\obj\x86\Debug\NanUI2.Example.csprojResolveAssemblyReference.cache
+C:\Users\wugang\Desktop\现在的工程\NanUI2\NanUI2.Example\obj\x86\Debug\NanUIFirst.SubForm.resources
+C:\Users\wugang\Desktop\现在的工程\NanUI2\NanUI2.Example\obj\x86\Debug\NanUIFirst.MainForm.resources
+C:\Users\wugang\Desktop\现在的工程\NanUI2\NanUI2.Example\obj\x86\Debug\NanUI2.Example.csproj.GenerateResource.Cache
+C:\Users\wugang\Desktop\现在的工程\NanUI2\NanUI2.Example\obj\x86\Debug\NanUI2.Example.exe
+C:\Users\wugang\Desktop\现在的工程\NanUI2\NanUI2.Example\obj\x86\Debug\NanUI2.Example.pdb

@@ -91,7 +91,7 @@
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "关于NanUI";
+			this.Text = "关于NanUI2";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
