@@ -18,5 +18,13 @@ namespace NanUIFirst
             InitializeComponent();
         }
 
+        private void SubForm_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 20; i++)
+            {
+               HtmlUIControl d = new HtmlUIControl();
+            }
+        }
+
     }
 }

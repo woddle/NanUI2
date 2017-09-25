@@ -59,7 +59,7 @@ namespace NanUIFirst
                 {
                     //显示字窗体的过程，不解释
                     SubForm su = new SubForm();
-                    su.Show();
+                    //su.Show();
 
                 });
 

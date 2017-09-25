@@ -55,6 +55,7 @@
             this.Controls.Add(this.subControl1);
             this.Name = "SubForm";
             this.Text = "SubForm";
+            this.Load += new System.EventHandler(this.SubForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -62,5 +63,7 @@
         #endregion
 
         private SubControl subControl1;
+
+
     }
 }
