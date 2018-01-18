@@ -103,16 +103,16 @@ namespace NanUI2.Properties {
         ///   查找类似 //初始化脚本
         ///
         /////注册窗口命令的事件监视
-        ////// 监听NanUI2窗口保留的最大化、最小化、还原、退出CSS标记的单击事件
+        ////// 监听NanUI窗口保留的最大化、最小化、还原、退出CSS标记的单击事件
         ////// 标记：
-        ////// -nanui2-close		关闭窗口
-        ////// -nanui2-maximize		最大化窗口
-        ////// -nanui2-minimize		最小化窗口
+        ////// -nanui-close		关闭窗口
+        ////// -nanui-maximize		最大化窗口
+        ////// -nanui-minimize		最小化窗口
         ///(function () {
         ///	document.addEventListener(&apos;DOMContentLoaded&apos;, function () {
         ///		document.body.addEventListener(&apos;click&apos;, function (e) {
         ///			var region = e.srcElement;
-        ///			var cmd = region.className.includes(&apos;-nanui2-close&apos;) ? &apos;close&apos; : region.className.includes(&apos;-nanui2-minimize&apos;) ? &apos;minimize&apos; : region.className.includes(&apos;-nanui2-maximize&apos;) ? &apos;maximize&apos; : null;
+        ///			var cmd = region.className.includes(&apos;-nanui-close&apos;) ? &apos;close&apos; : region.className.includes(&apos;-nanui-minimize&apos;) ? &apos;minimize&apos; : region.className.includes(&apos;-nanui-maximize&apos;) ? &apos;maximize&apos; : null;
         ///			if (c [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string InitialScripts {

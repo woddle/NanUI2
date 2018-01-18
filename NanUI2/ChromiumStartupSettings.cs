@@ -22,8 +22,8 @@ namespace NanUI2
 		internal static string FrameworkDir = null;
 		internal static string LocalesDir = null;
 		internal static string ResourcesDir = null;
-		internal static readonly string ApplicationDataDir = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), @"Woddle\NanUI2\");
-		internal static readonly string CommonRuntimeDir = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), @"Woddle\NanUI2\");
+		internal static readonly string ApplicationDataDir = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), @"Net Dimension Studio\NanUI\");
+		internal static readonly string CommonRuntimeDir = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), @"Net Dimension Studio\NanUI\");
 
 		internal static readonly RuntimeArch PlatformArch = CfxRuntime.PlatformArch == CfxPlatformArch.x64 ? RuntimeArch.x64 : RuntimeArch.x86;
 		internal static bool EnableFlashSupport { get; set; }
@@ -79,18 +79,14 @@ namespace NanUI2
 				libCfxName = "libcfx64.dll";
 
 
-
-// 			if (PlatformArch == RuntimeArch.x64)
-// 				FrameworkDir = System.IO.Path.Combine(localRuntimeDir, @"fx\", @"x64");
-// 			else
-// 				FrameworkDir = System.IO.Path.Combine(localRuntimeDir, @"fx\", @"x86");
-// 
-// 			LocalesDir = System.IO.Path.Combine(localRuntimeDir, @"fx\", @"Resources\locales");
-// 			ResourcesDir = System.IO.Path.Combine(localRuntimeDir, @"fx\", @"Resources");
-
             FrameworkDir = localRuntimeDir;
-            LocalesDir = System.IO.Path.Combine(localRuntimeDir, @"Resources\locales");
-            ResourcesDir = System.IO.Path.Combine(localRuntimeDir, @"Resources");
+            //if (PlatformArch == RuntimeArch.x64)
+            //    FrameworkDir = System.IO.Path.Combine(localRuntimeDir, @"fx\", @"x64");
+            //else
+            //    FrameworkDir = System.IO.Path.Combine(localRuntimeDir, @"fx\", @"x86");
+
+			LocalesDir = System.IO.Path.Combine(localRuntimeDir, @"Resources\locales");
+			ResourcesDir = System.IO.Path.Combine(localRuntimeDir, @"Resources");
 
 			var cfxDllFile = System.IO.Path.Combine(FrameworkDir, libCfxName);
 
@@ -104,8 +100,8 @@ namespace NanUI2
                 {"icudtl.dat", System.IO.File.Exists(System.IO.Path.Combine(FrameworkDir, "icudtl.dat"))},
                 {"libcfx", System.IO.File.Exists(cfxDllFile)},
                 {"libcef.dll", System.IO.File.Exists(System.IO.Path.Combine(FrameworkDir, "libcef.dll"))},
-                //{"natives_blob.bin", System.IO.File.Exists(System.IO.Path.Combine(FrameworkDir, "natives_blob.bin"))},
-                //{"snapshot_blob.bin", System.IO.File.Exists(System.IO.Path.Combine(FrameworkDir, "snapshot_blob.bin"))}
+                {"natives_blob.bin", System.IO.File.Exists(System.IO.Path.Combine(FrameworkDir, "natives_blob.bin"))},
+                {"snapshot_blob.bin", System.IO.File.Exists(System.IO.Path.Combine(FrameworkDir, "snapshot_blob.bin"))}
 			};
 
 			if (EnableFlashSupport)
@@ -122,6 +118,7 @@ namespace NanUI2
 
 		private static bool IsRuntimeExists()
 		{
+
 			var libCfxName = "libcfx.dll";
 
 			if (PlatformArch == RuntimeArch.x64)

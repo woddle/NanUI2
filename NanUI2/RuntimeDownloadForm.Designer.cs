@@ -136,7 +136,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "RuntimeDownloadForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "NanUI2 界面支持";
+			this.Text = "NanUI 界面支持";
 			this.panel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 

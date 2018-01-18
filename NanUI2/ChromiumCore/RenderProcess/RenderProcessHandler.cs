@@ -52,7 +52,7 @@ namespace NanUI2.ChromiumCore
 
 		private void RenderProcessHandler_OnWebKitInitialized(object sender, CfrEventArgs e)
 		{
-			//var result = CfrRuntime.RegisterExtension("NanUI2/extensions", Properties.Resources.ExtensionScripts, null);
+			//var result = CfrRuntime.RegisterExtension("NanUI/extensions", Properties.Resources.ExtensionScripts, null);
 		}
 
 		void RenderProcessHandler_OnUncaughtException(object sender, CfrOnUncaughtExceptionEventArgs e)
